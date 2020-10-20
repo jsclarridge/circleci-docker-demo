@@ -5,6 +5,9 @@ jobs:
   build:
     docker:
       - image: *circleci_primary
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     resource_class: small
     steps:
       - checkout
