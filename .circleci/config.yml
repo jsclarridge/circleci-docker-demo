@@ -4,7 +4,7 @@ references:
 jobs:
   build:
     docker:
-      - image: &circleci_primary
+      - image: *circleci_primary
     resource_class: small
     steps:
       - checkout
