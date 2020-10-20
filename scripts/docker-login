@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if (set +x -o nounset; echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin); then
-    echo "Login succeeded"
+    :
 else
     echo "Login failed"
     exit
