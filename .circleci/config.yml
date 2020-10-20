@@ -1,8 +1,10 @@
 version: 2
+references:
+  circleci_primary: &circleci_primary circleci/python@sha256:184230ab62e5d4858871e764ac9a3d04f0198c94d22dc634d68ea499eb352659
 jobs:
   build:
     docker:
-      - image: circleci/python:3.8-buster
+      - image: &circleci_primary
     resource_class: small
     steps:
       - checkout
