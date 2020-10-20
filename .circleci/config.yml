@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.8-buster
+    resource_class: small
     steps:
       - checkout
 
