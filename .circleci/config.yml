@@ -11,6 +11,11 @@ jobs:
     resource_class: small
     steps:
       - checkout
+      - setup_remote_docker
+      - run:
+          name: Build image
+          command: |
+            docker build -t circleci-docker-demo .
 
 workflows:
   version: 2
